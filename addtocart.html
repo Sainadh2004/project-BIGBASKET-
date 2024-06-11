@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart Example</title>
+<style>
+    .item {
+        margin-bottom: 10px;
+    }
+    button {
+        cursor: pointer;
+    }
+    body{
+        background-image: url(bbmobile2.jpg);
+        background-size: 1500px;
+    }
+    
+</style>
+</head>
+<body>
+<h1>YOUR CART</h1>
+<div class="product">
+    <h2>banana</h2>
+    <p>Price: $50 per dozen</p>
+    <button onclick="buynow('banana', 50)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>green chilly</h2>
+    <p>Price: $140 per kg</p>
+    <button onclick="buynow('green chilly', 50)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>coriender</h2>
+    <p>Price: $20 per bunch</p>
+    <button onclick="buynow('coriender', 20)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>Cucumber</h2>
+    <p>Price: $50 per kg</p>
+    <button onclick="buynow('Cucumber', 38)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>apple</h2>
+    <p>Price: $50 per kg</p>
+    <button onclick="buynow('apple', 200)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>Tomato</h2>
+    <p>Price: $50 per kg</p>
+    <button onclick="buynow('tomato', 50)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>onion</h2>
+    <p>Price: $50 per kg</p>
+    <button onclick="buynow('onion', 25)">ADD TO CART</button>
+</div>
+<div class="product">
+    <h2>grapes</h2>
+    <p>Price: $50 per kg</p>
+    <button onclick="buynow('grapes', 200)">ADD TO CART</button>
+</div>
+<h2>ITEM ADDED TO CART</h2>
+<ul id="cart">
+</ul>
+<script>
+    let cart = [];
+
+    function buynow(productName, price) {
+        cart.push({ productName, price });
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartList = document.getElementById('cart');
+        cartList.innerHTML = '';
+        let totalPrice = 0;
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.productName} - $${item.price}`;
+            cartList.appendChild(listItem);
+            totalPrice += item.price;
+        });
+        cartList.innerHTML += `<li>Total Price: $${totalPrice}</li>`;
+    }
+</script>
+<button >PLACE THE ORDER</button>
+</body>
+</html>

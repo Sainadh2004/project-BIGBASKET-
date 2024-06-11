@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Bar Example</title>
+<style>
+    #searchInput {
+        padding: 8px;
+        width: 300px;
+        font-size: 16px;
+    }
+    #searchResults {
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>Search Example</h1>
+<input type="text" id="searchInput" onkeyup="search()" placeholder="Search...">
+<div id="searchResults"></div>
+<script>
+    const items = ["Apple", "Banana", "Orange", "Grapes", "Pineapple", "Watermelon", "Mango"];
+
+    function search() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+
+        const filteredItems = items.filter(item => item.toLowerCase().includes(input));
+
+        if (filteredItems.length === 0) {
+            searchResults.innerHTML = 'No results found.';
+        } else {
+            filteredItems.forEach(item => {
+                const resultItem = document.createElement('div');
+                resultItem.textContent = item;
+                searchResults.appendChild(resultItem);
+            });
+        }
+    }
+</script>
+</body>
+</html>

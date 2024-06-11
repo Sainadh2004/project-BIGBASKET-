@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<style>
+  body{
+    background-image: url(newregistration.jpg);
+    background-size: cover;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px red;
+    text-align: left;
+   
+    padding-left: 570px;
+    padding-top: 50px;
+    margin-right: 500px;
+    
+  }
+  div{
+    
+    padding: 30px;
+    
+    border-radius: 20px;
+    margin-bottom: 500px;
+    border: 1px solid;
+    background: url("");
+    color: antiquewhite;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    gap: 5px;
+    backdrop-filter: brightness(80%);
+    flex-direction: column;
+    display: flex;            
+   
+  }
+</style>    
+
+<body>
+  <div>
+  <h1>Registration Form</h1>
+  <form action="loginsucces.html"  onsubmit="return validateForm()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required  placeholder="Username"><br>
+
+    <lable for="phonenumber">Phonenumber:</lable>
+    <input type="text" id="number" name="phonenumber"required placeholder="phonenumber"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="email"><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required placeholder="enter correct password"><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="enter confirmed password"><br>
+
+    <input type="submit" button="btn btn-primary" value="register">
+    <a href="loginsucces.html"></a>
+  </form>
+  </div>
+  <script>
+    function validateForm() {
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Check if passwords match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+
+      // Validate other fields (you can add more validation as needed)
+      if (username.length < 4 || username.length > 20) {
+        alert("Username must be between 4 and 20 characters");
+        return false;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Invalid email format");
+        return false;
+      }
+
+      return true;
+    }
+
+    function validateEmail(email) {
+      // A simple email validation regular expression
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+  </script>
+  
+</body>
+</html>

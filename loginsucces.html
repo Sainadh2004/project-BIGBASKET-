@@ -1,0 +1,48 @@
+<html>
+    <head>
+       <title>UI Pages</title>
+    <script>
+      function loginvalidation(){
+        var uname=document.myform.Username.value;
+        var password=document.myform.password.value;
+      if(uname== null|| uname == '' ){
+        alert("username must contain a value")
+        return false;
+      }
+      else if(password.length<6)
+      {
+        alert("password must contain 6 letters")
+      
+      return false;
+    }
+    return true;
+  }
+    </script>
+     <style>
+      body{
+        background-image: url('vegislogin.jpg');
+        background-size: 1500px;
+        padding-top: 400px;
+        padding-left: 500px;
+        font-size: cover;
+       
+      }
+      
+      h1{
+        color: rgba(10, 230, 28, 0.925);
+        
+        
+      }
+     </style>
+     </head>
+     <body>
+        <h1>Login form</h1>
+        <form name="myform" action="my web.html" onSubmit="return loginvalidation(this)">
+        <h3>Username:<input type="text" name="Username" autofocus><br>
+         password: <input type="password" name="password"></h3><br>
+        <button> SUBMIT</button>
+        
+    </form>
+     </body>
+     </html>
+

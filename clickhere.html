@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresho!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav{
+            text-align: center;
+        }
+        div{
+            border-width: 20px;
+        }
+        a{
+            color: #fff;
+        }
+        .container img {
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+            height: 20px; /* Maintain aspect ratio */
+            display: block; /* Remove any default spacing around the image */
+            margin-top: 10px; /* Example: Add some space below the text */
+        }
+        .container {
+            
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc; /* Add border around each container */
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            }
+
+        .inner-container {
+             /* Additional styles for inner content */
+            color: #666;
+            }
+
+        .container h2 {
+            color: #333;
+            width: 20px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid ;
+            border-radius: 2px;
+            background-color: #4CAF50;
+        }
+
+        .container p {
+            color: #666;
+
+
+        }
+        .offer {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .offer span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: #666;
+        }
+        .product img {
+            width: 300px;
+            height: 300px;
+            margin-right: 20px;
+            
+        }
+        .product-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .price {
+            font-size: 16px;
+            color: #666;
+        }
+        .discount {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .add-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .add-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>search your items</h2>
+        
+        <div class="container">
+            <div class="inner-container">
+              <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button type="submit" class="search-button" >
+                <a href="searchbar.html"></a>Search</button>
+                <input type="submit" formaction="my web.html" value="home">
+              </form>
+            </div>
+          </div>
+    </nav>
+    <div class="container">
+        <div class="offer">
+            <span>27% OFF</span>
+            <span>44% OFF</span>
+            <p>Partnering with Indian Farmers</p>
+            
+        </div>
+        <div class="product">
+            <img src="banana.jpg" alt="Banana Icon">
+            <div class="product-info">
+                <p class="product-name">Banana - Robusta</p>
+                <p class="price">₹50 per dozen</p>
+                <p class="discount">₹80</p>
+                
+            
+            <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+            <p>3 hrs</p>
+        </div>
+        </div>
+        <div class="product">
+            <img src="green chilly.jpg" alt="Chilli Icon">
+            <div class="product-info">
+                <p class="product-name"> Green Chilli(spicy)        </p>
+                <p class="price">₹140 per kg</p>
+                <p class="discount">₹252.05</p>
+                
+           
+            <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+            <p>3 hrs</p>
+        </div>
+        </div>
+        <div class="product">
+            <img src="coriender.jpg" alt="Coriander Icon">
+            <div class="product-info">
+                <p class="product-name">Coriander Leaves</p>
+                <p class="price">₹20 one bunch</p>
+                <p class="discount">₹30</p>
+            
+            <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+            <p>3 hrs</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="cucumber.jpg" alt="Cucumber Icon">
+            <div class="product-info">
+                <p class="product-name">Cucumber (Loose)</p>
+                <p class="price">₹38 per kg</p>
+                <p class="discount">₹60.27</p>
+            
+            <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+           
+        </div>
+    </div>
+    <div class="product">
+        <img src="apple.jpg" alt="apple Icon">
+        <div class="product-info">
+            <p class="product-name">apple (red)</p>
+            <p class="price">₹200 per kg</p>
+            <p class="discount">250</p>
+            
+        
+        <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+        <p>3 hrs</p>
+    </div>
+    </div>
+    <div class="product">
+        <img src="tomato.jpg" alt="tomato Icon">
+        <div class="product-info">
+            <p class="product-name"> Tomato (red) </p>
+            <p class="price">₹50 per kg</p>
+            <p class="discount">₹80</p>
+            
+       
+        <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+        <p>3 hrs</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="onion.jpg" alt="onion Icon">
+        <div class="product-info">
+            <p class="product-name">Onions Local</p>
+            <p class="price">₹25 per kg</p>
+            <p class="discount">₹100</p>
+        
+         <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+         <p>3 hrs</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="grapes.jpg" alt="grapes Icon">
+        <div class="product-info">
+            <p class="product-name">grapes (green)</p>
+            <p class="price">₹200 per kg</p>
+            <p class="discount">₹300</p>
+        
+         <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+         <p>3 hrs</p>
+         <p>37% OFF</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="chicken.jpg" alt="chicken Icon">
+        <div class="product-info">
+            <p class="product-name">chicken (fresh)</p>
+            <p class="price">₹250 per kg</p>
+            <p class="discount">₹300</p>
+            
+        
+         <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+         <p>3 hrs</p>
+        </div>
+    </div>
+        <div class="product">
+            <img src="mutton.jpg" alt="mutton Icon">
+            <div class="product-info">
+                <p class="product-name">mutton fresh</p>
+                <p class="price">₹950 per kg</p>
+                <p class="discount">₹1000</p>
+                
+            
+             <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+             <p>3 hrs</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="fish.webp" alt="fish Icon">
+            <div class="product-info">
+                <p class="product-name">FISH (TUNA)</p>
+                <p class="price">₹250 per kg</p>
+                <p class="discount">₹300</p>
+                
+            
+               <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+               <p>3 hrs</p>
+            </div>
+        ></div>   
+            <div class="product">
+                <img src="prawns.jpg" alt="prawns Icon">
+                <div class="product-info">
+                    <p class="product-name">prawns </p>
+                    <p class="price">₹250 per dozen</p>
+                    <p class="discount">₹300</p>
+                    
+                
+                <button class="add-btn"><a href="addtocart.html">buy now</a></button>
+                <p>3 hrs</p>
+                </div>
+            </div>
+</div>
+</body>
+</html>
